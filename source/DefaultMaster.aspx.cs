@@ -11,4 +11,14 @@ public partial class DefaultMaster : System.Web.UI.Page
     {
 
     }
+
+    protected void submit_Click(object sender, EventArgs e)
+    {
+        DataClassesDataContext objcon = new DataClassesDataContext();
+        Contact contact = new Contact();
+        contact.name = txtName.Text;
+
+        objcon.Contacts.InsertOnSubmit(contact);
+        objcon.SubmitChanges();
+    }
 }
