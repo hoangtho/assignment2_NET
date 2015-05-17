@@ -312,7 +312,7 @@
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <asp:Button runat="server" ID="submit" Text="Send Message" CssClass="btn btn-xl" OnClick="submit_Click" />
+                                        <asp:Button runat="server"  ID="submit" Text="Send Message" CssClass="btn btn-xl" OnClick="submit_Click" />
                                     </div>
                                 </div>
                             </form>
@@ -541,5 +541,6 @@
 
         </div>
     </form>
+
 </body>
 </html>
