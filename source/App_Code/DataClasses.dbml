@@ -24,7 +24,8 @@
       <Column Name="projectName" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="briefDescription" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
       <Column Name="detail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="image" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="imageS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="imageL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

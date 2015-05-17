@@ -425,7 +425,9 @@ public partial class Portfolio : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _detail;
 	
-	private string _image;
+	private string _imageS;
+	
+	private string _imageL;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -439,8 +441,10 @@ public partial class Portfolio : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnbriefDescriptionChanged();
     partial void OndetailChanging(string value);
     partial void OndetailChanged();
-    partial void OnimageChanging(string value);
-    partial void OnimageChanged();
+    partial void OnimageSChanging(string value);
+    partial void OnimageSChanged();
+    partial void OnimageLChanging(string value);
+    partial void OnimageLChanged();
     #endregion
 	
 	public Portfolio()
@@ -528,22 +532,42 @@ public partial class Portfolio : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_image", DbType="VarChar(100)")]
-	public string image
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imageS", DbType="VarChar(100)")]
+	public string imageS
 	{
 		get
 		{
-			return this._image;
+			return this._imageS;
 		}
 		set
 		{
-			if ((this._image != value))
+			if ((this._imageS != value))
 			{
-				this.OnimageChanging(value);
+				this.OnimageSChanging(value);
 				this.SendPropertyChanging();
-				this._image = value;
-				this.SendPropertyChanged("image");
-				this.OnimageChanged();
+				this._imageS = value;
+				this.SendPropertyChanged("imageS");
+				this.OnimageSChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imageL", DbType="VarChar(100)")]
+	public string imageL
+	{
+		get
+		{
+			return this._imageL;
+		}
+		set
+		{
+			if ((this._imageL != value))
+			{
+				this.OnimageLChanging(value);
+				this.SendPropertyChanging();
+				this._imageL = value;
+				this.SendPropertyChanged("imageL");
+				this.OnimageLChanged();
 			}
 		}
 	}

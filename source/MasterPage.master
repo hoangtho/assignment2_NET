@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -59,17 +60,17 @@
                             </li>
                             <li>
                                 <a class="page-scroll" href="#portfolio">
-                                    <asp:Menu runat="server" Text="Portfolio" />
+                                    <asp:Menu runat="server" />
                                     Portfolio</a>
                             </li>
                             <li>
                                 <a class="page-scroll" href="#team">
-                                    <asp:Menu runat="server" Text="About" />
+                                    <asp:Menu runat="server" />
                                     About</a>
                             </li>
                             <li>
                                 <a class="page-scroll" href="#contact">
-                                    <asp:Menu runat="server" Text="Contact" />
+                                    <asp:Menu runat="server" />
                                     Contact</a>
                             </li>
                         </ul>
@@ -112,7 +113,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 portfolio-item">
+                        <!--<div class="col-md-4 col-sm-6 portfolio-item">
                             <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content">
@@ -153,7 +154,8 @@
                                 <h4>Treehouse</h4>
                                 <p class="text-muted">Website Design</p>
                             </div>
-                        </div>
+                        </div>  -->
+
                         <div class="col-md-4 col-sm-6 portfolio-item">
                             <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                                 <div class="portfolio-hover">
@@ -161,11 +163,12 @@
                                         <i class="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img src="App_Themes/img/portfolio/golden.png" class="img-responsive" alt="" />
+                                <!-- <img src="App_Themes/img/portfolio/golden.png" class="img-responsive" alt="" />  -->
+                                <asp:Image ID="ImagePr4" CssClass="img-responsive" runat="server" />
                             </a>
                             <div class="portfolio-caption">
-                                <h4>Golden</h4>
-                                <p class="text-muted">Website Design</p>
+                                <h4 runat="server" id ="ProjectName4S"></h4>
+                                <p class="text-muted">Software</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 portfolio-item">
@@ -175,25 +178,27 @@
                                         <i class="fa fa-plus fa-3x"></i>
                                     </div>
                                 </div>
-                                <img src="App_Themes/img/portfolio/escape.png" class="img-responsive" alt="" />
+                                <!-- <img src="App_Themes/img/portfolio/escape.png" class="img-responsive" alt="" /> -->
+                                <asp:Image ID="ImagePr5" CssClass="img-responsive" runat="server" />
                             </a>
                             <div class="portfolio-caption">
-                                <h4>Escape</h4>
-                                <p class="text-muted">Website Design</p>
+                                <h4 runat="server" id ="ProjectName5S"></h4>
+                                <p class="text-muted">Software</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 portfolio-item">
                             <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content">
-                                        <i class="fa fa-plus fa-3x"></i>
+                                        <i class="fa fa-plus fwea-3x"></i>
                                     </div>
                                 </div>
-                                <img src="App_Themes/img/portfolio/dreams.png" class="img-responsive" alt="" />
+                                <!--<img src="App_Themes/img/portfolio/dreams.png" class="img-responsive" alt="" /> -->
+                                <asp:Image ID="ImagePr6" CssClass="img-responsive" runat="server" />
                             </a>
                             <div class="portfolio-caption">
-                                <h4>Dreams</h4>
-                                <p class="text-muted">Website Design</p>
+                                <h4 runat="server" id ="ProjectName6S"></h4>
+                                <p class="text-muted">Software</p>
                             </div>
                         </div>
                     </div>
@@ -212,9 +217,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="team-member">
-                                <img src="App_Themes/img/team/1.jpg" class="img-responsive img-circle" alt="" />
-                                <h4>Kay Garland</h4>
-                                <p class="text-muted">Lead Designer</p>
+                                <!--<img src="App_Themes/img/team/1.jpg" class="img-responsive img-circle" alt="" /> -->
+                                <asp:Image ID="Img1" CssClass="img-responsive img-circle" runat="server" />
+                                <h4 runat="server" id="NameT"></h4>                       
+                                <p class="text-muted" runat="server" id="ClassT"></p>
+                                <p class="text-muted" runat="server" id="InterestT"></p>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -227,9 +234,10 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="team-member">
-                                <img src="App_Themes/img/team/2.jpg" class="img-responsive img-circle" alt="" />
-                                <h4>Larry Parker</h4>
-                                <p class="text-muted">Lead Marketer</p>
+                                <asp:Image ID="Image2" CssClass="img-responsive img-circle" runat="server" />
+                                <h4 runat="server" id="NameD"></h4>                       
+                                <p class="text-muted" runat="server" id="ClassD"></p>
+                                <p class="text-muted" runat="server" id="InterestD"></p>
                                 <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -288,7 +296,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <form name="sentMessage" id="contactForm" novalidate>
+                            <form name="sentMessage" id="contactForm" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -312,7 +320,7 @@
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <asp:Button runat="server"  ID="submit" Text="Send Message" CssClass="btn btn-xl" OnClick="submit_Click" />
+                                        <asp:Button runat="server" ID="submit" Text="Send Message" CssClass="btn btn-xl" OnClick="submit_Click" />
                                     </div>
                                 </div>
                             </form>
@@ -353,6 +361,7 @@
             <!-- Use the modals below to showcase details about your portfolio projects! -->
 
             <!-- Portfolio Modal 1 -->
+
             <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-content">
                     <div class="close-modal" data-dismiss="modal">
@@ -453,11 +462,10 @@
                             <div class="col-lg-8 col-lg-offset-2">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here -->
-                                    <h2>Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-responsive img-centered" src="App_Themes/img/portfolio/golden-preview.png" alt="" />
-                                    <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                    <h2 runat="server" id ="ProjectName4"></h2>
+                                    <p class="item-intro text-muted" runat="server" id="BriefDescription4"></p>
+                                     <asp:Image ID="ImagePr4L" CssClass="img-responsive img-centered" runat="server" />
+                                    <p runat="server" id="Pr4Detail"> </p>
                                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close Project</button>
                                 </div>
                             </div>
@@ -480,11 +488,10 @@
                             <div class="col-lg-8 col-lg-offset-2">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here -->
-                                    <h2>Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-responsive img-centered" src="App_Themes/img/portfolio/escape-preview.png" alt="" />
-                                    <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                    <h2 runat="server" id ="ProjectName5"></h2>
+                                    <p class="item-intro text-muted" runat="server" id="BriefDescription5"></p>
+                                     <asp:Image ID="ImagePr5L" CssClass="img-responsive img-centered" runat="server" />
+                                    <p runat="server" id="Pr5Detail"> </p>
                                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close Project</button>
                                 </div>
                             </div>
@@ -507,11 +514,14 @@
                             <div class="col-lg-8 col-lg-offset-2">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here -->
-                                    <h2>Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-responsive img-centered" src="App_Themes/img/portfolio/dreams-preview.png" alt="" />
-                                    <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                    <h2 runat="server" id ="ProjectName6"></h2>
+                                    <p class="item-intro text-muted" runat="server" id="BriefDescription6"></p>
+                                    <!--<img class="img-responsive img-centered" src="App_Themes/img/portfolio/dreams-preview.png" alt="" /> -->
+                                    <asp:Image ID="ImagePr6L" CssClass="img-responsive img-centered" runat="server" />
+                                    <p runat="server" id="Pr6Detail">
+                                        <!--Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind. -->
+                                    </p>
+                                    <!--<p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p> -->
                                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close Project</button>
                                 </div>
                             </div>
@@ -541,6 +551,5 @@
 
         </div>
     </form>
-
 </body>
 </html>
